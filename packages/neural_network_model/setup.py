@@ -9,7 +9,7 @@ from setuptools import find_packages, setup
 
 
 # Package meta-data.
-NAME = 'neural_network_model'
+NAME = 'neural-network-model'
 DESCRIPTION = 'Train and deploy neural network model.'
 URL = 'your github project'
 EMAIL = 'your_email@email.com'
