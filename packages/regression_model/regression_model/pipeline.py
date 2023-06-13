@@ -30,7 +30,7 @@ price_pipe = Pipeline(
         ),
         (
             "rare_label_encoder",
-            pp.RareLabelCategoricalEncoder(tol=0.01, variables=config.CATEGORICAL_VARS),
+            pp.RareLabelCategoricalEncoder(tol=0.05, variables=config.CATEGORICAL_VARS),
         ),
         (
             "categorical_encoder",
