@@ -50,12 +50,12 @@ def cnn_model(kernel_size=(3, 3),
 
 
 checkpoint = ModelCheckpoint(config.MODEL_PATH,
-                             monitor='acc',
+                             monitor='accuracy',
                              verbose=1,
                              save_best_only=True,
                              mode='max')
 
-reduce_lr = ReduceLROnPlateau(monitor='acc',
+reduce_lr = ReduceLROnPlateau(monitor='accuracy',
                               factor=0.5,
                               patience=2,
                               verbose=1,
@@ -66,7 +66,7 @@ callbacks_list = [checkpoint, reduce_lr]
 
 cnn_clf = KerasClassifier(build_fn=cnn_model,
                           batch_size=config.BATCH_SIZE,
-                          validation_split=10,
+                          validation_split=0.2,
                           epochs=config.EPOCHS,
                           verbose=1,  # progress bar - required for CI job
                           callbacks=callbacks_list,
