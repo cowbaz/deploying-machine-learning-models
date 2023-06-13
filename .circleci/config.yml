@@ -138,7 +138,7 @@ jobs:
 
   test_ml_api_py38:
     docker:
-      - image: circleci/python:3.8.1
+      - image: circleci/python:3.8.0
     working_directory: ~/project/packages/ml_api
     steps:
       - checkout:
