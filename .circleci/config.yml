@@ -176,6 +176,8 @@ jobs:
 
   section_9_differential_tests:
     <<: *defaults
+    docker:
+      - image: circleci/python:3.8.0
     steps:
       - checkout
       - *prepare_venv
