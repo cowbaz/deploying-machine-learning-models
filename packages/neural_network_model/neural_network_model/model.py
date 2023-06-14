@@ -7,7 +7,6 @@ from keras.wrappers.scikit_learn import KerasClassifier
 
 from neural_network_model.config import config
 
-
 def cnn_model(kernel_size=(3, 3),
               pool_size=(2, 2),
               first_filters=32,
